@@ -1,12 +1,22 @@
-package array;
-import java.util.Scanner;
+package lab8.task1;
+abstract class Game{
+    abstract void  play();
+}
+class chess extends Game{
+    void play(){
+        System.out.println("We play Game");
+    }
+}
+class checker extends Game{
+    void play(){
+        System.out.println("Ypu win the Game");
+    }
+}
 public class task3 {
     public static void main(String[] args) {
-         Scanner input=new Scanner (System.in);
-        int x,i;
-        x=input.nextInt();
-        for(i=1; i<=10; i++){
-            System.out.println(i+"x"+x+"="+i*x);
-        }
+        chess obj1=new chess();
+        checker obj2=new checker();
+        obj1.play();
+        obj2.play();
     }
 }
